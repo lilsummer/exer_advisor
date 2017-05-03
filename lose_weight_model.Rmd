@@ -1,0 +1,31 @@
+---
+title: "Lose_weight_model"
+author: "xg"
+date: "4/25/2017"
+output: html_document
+---
+
+To build a logistic regression model to predict the recommendation of cardio exercise, we utilized several variables related to biometrics and exercise information (independent variables). The predicted variable (dependent variable) is a variable about recommendation on cardio exercise. These varaibles are recorded in BRFSS survey by CDC. The data I am using include 15 years of surveys during 2000-2015. 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##### Building a logistic regression model
+
+
+```{r cars}
+
+
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

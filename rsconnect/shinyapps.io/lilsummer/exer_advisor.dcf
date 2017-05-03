@@ -1,0 +1,11 @@
+name: exer_advisor
+title: exer_advisor
+account: lilsummer
+server: shinyapps.io
+appId: 155097
+bundleId: 813925
+url: https://lilsummer.shinyapps.io/exer_advisor/
+when: 1493838474.52542
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: 04-26-working.r

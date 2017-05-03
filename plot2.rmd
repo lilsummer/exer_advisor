@@ -1,0 +1,41 @@
+---
+title: "plot2.rmd"
+author: "Xi Guo (Cassie)"
+date: "February 6, 2017"
+output: html_document
+---
+
+
+
+### Health Status of Cyclists
+
+
+* Data source: CDC - BRFSS (https://www.cdc.gov/brfss/)
+    * Includes data from 2011 - 2015
+    
+    
+* Showing the chronic disease status of peopel who ride bicyles regularly
+    * The older age groups show higher levels of chronic diseases risks (the bright color on the right side)
+    * Cyclists who have higher exercise score tend to be heathier (the dark color on the higher level)
+    
+* I used Hierarchical Clustering to cluster the cyclists into four groups based on their exercise schedule, health status, sex, and age.
+    * Group 1 and 2 are the prodominent groups.
+    * Group 3 and 4 have lowest exercise scores (the squares and the crosses on the bottom right).
+
+
+```{r echo=F, fig.height=8, fig.width=10}
+library(ggplot2)
+library(plotly)
+library(magrittr)
+library(dplyr)
+    t_bike = readRDS('t_bike.rds')
+    p2 <- ggplot(t_bike, aes(x = X_AGEG5YR, y = score, 
+                             color = chronic, 
+                             shape = group)) + 
+        geom_jitter(alpha = .7) +
+        xlab('Age group') +
+        ylab('Exercise score')
+    
+  ggplotly(p2)
+```
+
